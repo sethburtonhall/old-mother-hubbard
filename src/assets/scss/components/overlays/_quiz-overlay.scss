@@ -1,0 +1,138 @@
+.treat-quiz {
+
+    &.reveal {
+
+        &.large {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &:before {
+            width:100%;
+            content:'';
+            display:block;
+            position:absolute;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left:0;
+            background: -moz-linear-gradient(top, rgba(239,230,215,0) 0%, rgba(255,255,255,1) 50%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(239,230,215,0) 0%, rgba(255,255,255,1) 50%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to top, rgba(239,230,215,0) 0%, rgba(255,255,255,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efe6d7',GradientType=0 ); /* IE6-9 */
+        }
+    }
+
+    .orbit-container {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .orbit-slide {
+        text-align: center;
+        color: get-color(brand-purple);
+
+        .orbit-figure {
+
+            p {
+                margin: 0;
+            }
+
+            h2 {
+                font-family: $body-font-family;
+                margin-bottom: rem-calc(90);
+            }
+
+            .treat-quiz-input {
+
+                input {
+                    max-width: 50%;
+                    margin: auto;
+                    text-align: center;
+                    color: get-color(brand-purple);
+                    height: rem-calc(80);
+                    font-size: rem-calc(36);
+                }
+            }
+
+            .multiple-choice {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                @include breakpoint(large) {
+                    flex-direction: row;
+                }
+
+                .choice-item {
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto;
+                    max-width: 150px;
+
+                    // @include breakpoint(medium) {
+                    //     max-width: 200px;
+                    // }
+                    //
+                    // @include breakpoint(large) {
+                    //     max-width: 248px;
+                    // }
+
+                    .image-wrapper {
+                        background: $white;
+                        box-shadow: 6px 6px 0px 2px get-color(cream);
+                        border-radius: rem-calc(150);
+                        margin-bottom: $global-margin;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background: #F9F2E3;
+                        }
+                    }
+
+                    button {
+                        margin: rem-calc(10);
+                        color: get-color(brand-purple);
+                        background-color: $white;
+                        padding: rem-calc(7);
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: $white;
+                            background-color: get-color(brand-purple);
+                        }
+                    }
+
+                    p {
+
+                    }
+                }
+            }
+
+            button.results-button {
+                background-color: get-color(brand-yellow);
+                margin-top: $global-margin*4;
+            }
+        }
+    }
+
+    .close-button {
+        color: get-color(brand-yellow);
+    }
+}

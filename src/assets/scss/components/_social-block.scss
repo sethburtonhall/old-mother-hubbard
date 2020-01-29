@@ -1,0 +1,29 @@
+.social-block {
+    background-color: get-color(cream);
+    text-align: center;
+
+    img {
+        padding-bottom: $global-padding;
+    }
+
+    blockquote {
+        border-left: 0;
+        color: get-color(brand-purple);
+        font-size: rem-calc(20);
+
+        @include breakpoint(medium) {
+            padding: 0 rem-calc(125);
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(30);
+        }
+
+        span {
+            display:block;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: rem-calc(34);
+        }
+    }
+}

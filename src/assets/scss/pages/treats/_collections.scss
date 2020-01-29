@@ -1,0 +1,143 @@
+.treats-collection {
+
+    .hero-section {
+        background: url('/assets/img/collections-hero.png') 50% no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hero-section-text {
+
+            @include breakpoint(xlarge) {
+                padding: $global-padding*6;
+            }
+
+            .heading {
+
+                h1 {
+                    display: inline-block;
+                    margin: 0 rem-calc(5);
+                }
+
+                &:before {
+                    display: inline-block;
+                    content: ' ';
+                    background-image: url('/assets/img/classic-symbol-left.svg');
+                    background-size: 28px 28px;
+                    height: 28px;
+                    width: 28px;
+
+                    @include breakpoint(medium) {
+                        background-size: 45px 45px;
+                        height: 45px;
+                        width: 45px;
+                    }
+
+                    @include breakpoint(large) {
+                        background-size: 53px 53px;
+                        height: 53px;
+                        width: 53px;
+                    }
+                }
+
+                &:after {
+                    display: inline-block;
+                    content: ' ';
+                    background-image: url("/assets/img/classic-symbol-right.svg");
+                    background-size: 28px 28px;
+                    height: 28px;
+                    width: 28px;
+
+                    @include breakpoint(medium) {
+                        background-size: 45px 45px;
+                        height: 45px;
+                        width: 45px;
+                    }
+
+                    @include breakpoint(large) {
+                        background-size: 53px 53px;
+                        height: 53px;
+                        width: 53px;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+
+                @include breakpoint(large) {
+                    padding: 0 $global-padding;
+                }
+
+                @include breakpoint(xlarge) {
+                    padding: 0 $global-padding*8;
+                }
+            }
+        }
+    }
+
+    .border {
+        position: relative;
+        @include zig-zag(top, cream);
+    }
+
+    .footer-links {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+
+        background-color: get-color(light-cream);
+        color: get-color(brand-purple);
+        text-align: center;
+        padding: $global-padding;
+
+        .left-link {
+
+            @include breakpoint(xlarge) {
+                padding-left: rem-calc(400);
+            }
+        }
+
+        .right-link {
+
+            @include breakpoint(xlarge) {
+                padding-right: rem-calc(400);
+            }
+        }
+
+        i {
+            color: get-color(brand-yellow);
+            margin-bottom: rem-calc(10);
+        }
+
+        p {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            line-height: 1;
+            margin: 0;
+            margin: 0;
+        }
+
+        a {
+            color: get-color(brand-purple);
+        }
+
+        hr {
+            border-bottom: 1px solid get-color(brand-yellow);
+
+            @include breakpoint(medium) {
+                clear: both;
+                width: 1px;
+                height: 50px;
+                border-top: 0;
+                border-right: 0;
+                border-bottom: 0;
+                border-left: 1px solid get-color(brand-yellow);
+            }
+        }
+    }
+}

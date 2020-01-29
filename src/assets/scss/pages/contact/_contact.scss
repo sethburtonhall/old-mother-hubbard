@@ -1,0 +1,8 @@
+.contact {
+    padding-top: $global-padding;
+    color: get-color(brand-purple);
+
+    @include breakpoint(large) {
+        padding-top: rem-calc(150);
+    }
+}

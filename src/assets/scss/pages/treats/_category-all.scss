@@ -1,0 +1,214 @@
+.treats-all-category {
+
+    .hero-section {
+        background: url('/assets/img/treats-category-hero.png') 50% no-repeat;
+        background-size: cover;
+    }
+
+    .product-navigation,
+    .product-nav-footer {
+        position: relative;
+        background-image: url(/assets/img/cream-bg.png);
+        background-repeat: repeat;
+        padding: rem-calc(20);
+    }
+
+    .product-navigation {
+        padding: rem-calc(20);
+        @include zig-zag(top, cream);
+    }
+
+    .product-nav-footer {
+        padding: rem-calc(100);
+    }
+
+    .product-navigation {
+        position: relative;
+        background-image: url(/assets/img/cream-bg.png);
+        background-repeat: repeat;
+        padding: rem-calc(20);
+
+        @include breakpoint(large) {
+            padding: rem-calc(30) rem-calc(20);
+        }
+
+        @include breakpoint(xlarge) {
+            padding: rem-calc(50) rem-calc(20);
+        }
+
+        .category-nav {
+
+            .tabs {
+                background: transparent;
+            }
+
+            .tabs-title {
+                padding: rem-calc(11);
+
+                @include breakpoint(large) {
+                    padding: 1.25rem 1.5rem;
+                }
+
+                a {
+                    padding: rem-calc(5) rem-calc(10);
+
+                    @include breakpoint(large) {
+                        font-size: rem-calc(18);
+                    }
+
+                    @include breakpoint(xlarge) {
+                        font-size: rem-calc(21);
+                    }
+                }
+            }
+
+            .tabs-title > a:focus,
+            .tabs-title > a[aria-selected='true'],
+            .tabs-title > a:hover {
+                background: get-color(brand-purple);
+                color: get-color(cream);
+                border-radius: 15px;
+            }
+
+            ul {
+
+                li {
+
+                    a {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: get-color(brand-purple);
+                    }
+                }
+            }
+        }
+    }
+
+    .product-nav-slider {
+        background: get-color(light-cream);
+
+        .grid-container {
+            width: 100%;
+        }
+
+        .tabs-content {
+            background: transparent;
+            border: 0;
+
+            .orbit {
+
+                .orbit-container {
+
+                    .product {
+                        text-align: center;
+
+                        @include breakpoint(medium) {
+                            padding: 0 rem-calc(100);
+                        }
+
+                        @include breakpoint(xlarge) {
+                            padding: 0 rem-calc(200);
+                        }
+
+                        .cell {
+                            align-self: center;
+                        }
+
+                        color: get-color(brand-purple);
+
+                        .heading {
+
+                            h1 {
+                                display: inline-block;
+                                text-transform: uppercase;
+                                margin: 0 rem-calc(5);
+                                margin-bottom: 0;
+
+                                @include breakpoint(medium) {
+                                    font-size: rem-calc(40);
+                                }
+
+                                @include breakpoint(large) {
+                                    font-size: rem-calc(46);
+                                }
+
+                                @include breakpoint(xlarge) {
+                                    font-size: rem-calc(80);
+                                }
+                            }
+
+                            &:before,
+                            &:after {
+                                display: inline-block;
+                                content: ' ';
+                                background-size: 28px 28px;
+                                height: 28px;
+                                width: 28px;
+
+                                @include breakpoint(large) {
+                                    background-size: 33px 33px;
+                                    height: 33px;
+                                    width: 33px;
+                                }
+
+                                @include breakpoint(xlarge) {
+                                    background-size: 53px 53px;
+                                    height: 53px;
+                                    width: 53px;
+                                }
+                            }
+
+                            &:before {
+                                background-image: url('/assets/img/classic-symbol-left.svg');
+                            }
+
+                            &:after {
+                                background-image: url('/assets/img/classic-symbol-right.svg');
+                            }
+                        }
+
+                        h3 {
+
+                            @include breakpoint(medium only) {
+                                font-size: rem-calc(20);
+                            }
+
+                            @include breakpoint(large only) {
+                                font-size: rem-calc(25);
+                            }
+                        }
+
+                        button {
+                            font-size: rem-calc(14);
+
+                            @include breakpoint(medium) {
+                                font-size: rem-calc(16);
+                            }
+
+                            @include breakpoint(xlarge) {
+                                font-size: rem-calc(18);
+                            }
+                        }
+
+                        .badge {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: rem-calc(75);
+                            background: none;
+
+                            @include breakpoint(large) {
+                                width: rem-calc(100);
+                            }
+
+                            @include breakpoint(xlarge) {
+                                width: rem-calc(200);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

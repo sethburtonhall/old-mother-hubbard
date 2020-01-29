@@ -1,0 +1,130 @@
+.casestudy-slider {
+  position: relative;
+  .slide {
+    padding: 0 1rem;
+  }
+
+  .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: rem-calc(50);
+    color: $maya-blue;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      color: $brand-blue;
+    }
+  }
+
+  .slick-prev {
+    left: -50px;
+  }
+
+  .slick-next {
+    right: -50px;
+  }
+
+  .casestudy-image, .casestudy-info {
+    min-height: 400px;
+
+    &.contact {
+      min-height: auto;
+      height: 275px;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+  .casestudy-image {
+    background-color: $dark-blue;
+    background-position: center 15%;
+    background-size: 100%;
+    background-size: cover;
+  }
+
+  .casestudy-info {
+    background-color: $dark-blue;
+    padding: 0 5%;
+    color: $white;
+    text-align: center;
+    font-size: rem-calc(18);
+    font-weight: 100;
+
+    .callout-container {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: rem-calc(26);
+    font-weight: 900;
+  }
+
+  .button {
+    font-family: $body-font-family;
+    font-size: rem-calc(12);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.dev-property-container {
+  .tabs-content {
+    min-height: 400px;
+  }
+}
+
+
+@include breakpoint(medium down) {
+  .casestudy-slider {
+    .casestudy-image {
+      min-height: 250px;
+    }
+    .casestudy-info {
+      min-height: auto;
+      height: auto;
+    }
+
+    .slick-prev, .slick-next {
+      top: auto;
+      bottom: 35px;
+      transform: none;
+      border-top: 1px solid $maya-blue;
+      border-bottom: 1px solid $maya-blue;
+      font-size: rem-calc(33);
+
+      &:hover {
+        background-color: $maya-blue;
+        color: $white;
+      }
+    }
+
+    .button {
+      display: block;
+      margin: 0 auto 15px;
+      width: 75%;
+    }
+
+    .slick-prev {
+      left: 1rem;
+      border-right: 1px solid $maya-blue;
+    }
+
+    .slick-next {
+      right: 1rem;
+      border-left: 1px solid $maya-blue;
+    }
+  }
+
+  .dev-property-container {
+    .tabs-content {
+      min-height: 500px;
+    }
+  }
+}

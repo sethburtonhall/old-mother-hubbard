@@ -3,6 +3,8 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'slick';
+@import 'slick-theme';
 
 // Global styles
 @include foundation-global-styles;
@@ -26,7 +28,7 @@
 // Basic components
 @include foundation-badge;
 @include foundation-breadcrumbs;
-@include foundation-callout;
+// @include foundation-callout;
 @include foundation-card;
 @include foundation-dropdown;
 @include foundation-pagination;
@@ -62,3 +64,42 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Global
+@import 'global/general';
+@import 'global/fonts';
+@import 'global/helpers';
+
+// Custom Components
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/quiz-cta';
+@import 'components/social-block';
+@import 'components/product-grid';
+@import 'components/hero-section';
+@import 'components/star-rating';
+
+// Overlays
+@import 'components/overlays/gateway-overlay';
+@import 'components/overlays/social-overlay';
+@import 'components/overlays/ingredient-overlay';
+@import 'components/overlays/quiz-overlay';
+
+// Pages
+@import 'pages/bakery/ingredient-dictionary';
+@import 'pages/bakery/our-story';
+@import 'pages/bakery/faq';
+@import 'pages/blog/blog';
+@import 'pages/blog/blog-article';
+@import 'pages/contact/contact.scss';
+@import 'pages/contact/where-to-buy.scss';
+@import 'pages/home';
+@import 'pages/treats/all';
+@import 'pages/treats/category-all';
+@import 'pages/treats/collections';
+@import 'pages/treats/recipe';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800');
+@import 'vendors/fontawesome/solid';
+@import 'vendors/fontawesome/fontawesome';

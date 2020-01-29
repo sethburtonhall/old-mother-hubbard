@@ -6,14 +6,299 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Old Mother Hubbard</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
 <body>
+
+<div class="grid-container full header double-border">
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+        <!-- Close button -->
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <ul class="vertical menu accordion-menu" data-accordion-menu>
+            <li>
+                <a href="#">Treats</a>
+                <ul class="menu vertical nested">
+                    <li><a href="treats-all.html">All Treats</a></li>
+                    <li><a href="#">Treat Quiz</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">The Bakery</a>
+                <ul class="menu vertical nested">
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="ingredient-dictionary.html">Ingredients</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </li>
+            <li><a href="#">The Biscuit Blog</a></li>
+            <li>
+                <a href="#">Connect</a>
+                <ul class="menu vertical nested">
+                    <li><a href="#">Where to Buy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Join Our Team</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="social-icons">
+            <ul>
+                <li>
+                    <a href="#" class="social_instagram"></a>
+                </li>
+                <li>
+                    <a href="#" class="social_facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="social_twitter"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="off-canvas-content nav" data-off-canvas-content>
+        <div class="mobile-burger-container hide-for-large">
+            <button class="menu-burger" type="button" data-toggle="offCanvas">
+                <span>Open/Close Menu</span>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="main-nav">
+            <div class="left-wrapper">
+                <div class="top-bar-left show-for-large">
+                    <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                        <li>
+                            <a href="#" class="has-dropdown">Treats</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="treats-all.html">All Treats</a></li>
+                                <li>
+                                    <a href="treats-all-category.html">Classic</a>
+                                    <!-- <ul class="product-image-nav">
+                                        <li>
+                                            <a href="treats-all.html"><img src="/assets/img/product-small.png" alt=""></a>
+                                            <p>Original Assortment</p>
+                                        </li>
+                                        <li>
+                                            <a href="treats-all-category.html"><img src="/assets/img/product-small.png" alt=""></a>
+                                            P-Nuttier
+                                        </li>
+                                        <li>
+                                            <a href="treats-all-category.html"><img src="/assets/img/product-small.png" alt=""></a>
+                                            <p>Bac'N'Cheez</p>
+                                        </li>
+                                        <li>
+                                            <a href="treats-all-category.html"><img src="/assets/img/product-small.png" alt=""></a>
+                                            <p>Just Vegg'n</p>
+                                        </li>
+                                        <li>
+                                            <a href="treats-all-category.html"><img src="/assets/img/product-small.png" alt=""></a>
+                                            <p>Liv'R'Crunch</p>
+                                        </li>
+                                        <li>
+                                            <a href="treats-all-category.html"><img src="/assets/img/product-small.png" alt=""></a>
+                                            <p>Puppy</p>
+                                        </li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="treats-all-category.html">Mother's Solution</a></li>
+                                <li><a href="treats-all-category.html">Grain Free</a></li>
+                                <li><a href="treats-all-category.html">Mini & Training</a></li>
+                                <li><a href="treats-all-category.html">Seasonal</a></li>
+                                <li><a href="treats-all-category.html">Soft & Tasty</a></li>
+                                <li><a href="treats-all-category.html">Big Ol' Bone</a></li>
+                                <li><a href="treats-all-category.html">Treat Quiz</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="has-dropdown">The Bakery</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="our-story.html">Our Story</a></li>
+                                <li><a href="ingredient-dictionary.html">Ingredients</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center-wrapper">
+                <div class="top-bar-center">
+                    <a href="/" class="logo">
+                        <img src="/assets/img/header-logo.png" alt="Old Mother Hubbard Logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <div class="top-bar-right show-for-large">
+                    <div class="social-icons show-for-large">
+                        <ul>
+                            <li>
+                                <a href="#" class="social_instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_twitter"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="dropdown menu" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                        <li><a href="blog.html">The Biscuit Blog</a></li>
+                        <li>
+                            <a href="#" class="has-dropdown">Connect</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="where-to-buy.html">Where to Buy</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#">Join Our Team</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
 {{> body}}
 
+<div class="grid-container full footer">
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-7 large-5 large-offset-1">
+            <div class="grid-container footer-nav">
+                <div class="grid-x">
+                    <div class="cell medium-3">
+                        <p>Snacks</p>
+                        <ul>
+                            <li><a href="#">Treat Quiz</a></li>
+                            <li><a href="#">Classic</a></li>
+                            <li><a href="#">Mother’s Solutions</a></li>
+                            <li><a href="#">Grain Free</a></li>
+                            <li><a href="#">Mini & Training</a></li>
+                            <li><a href="#">Seasonal</a></li>
+                            <li><a href="#">Soft & Tasty</a></li>
+                            <li><a href="#">Big Ol’ Bone</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cell medium-3">
+                        <p>The Bakery</p>
+                        <ul>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Ingredients</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cell medium-3">
+                        <p>Connect</p>
+                        <ul>
+                            <li><a href="#">The Buscuit Blog</a></li>
+                            <li><a href="#">Where to Buy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Join Our Team</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cell medium-3">
+                        <p>Join the Community</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="social_instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_twitter"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cell medium-5 large-3 large-offset-1">
+            <h5>Join the Cupboard Club</h5>
+            <p>Sign up for exclusive free offers</p>
+
+            <input type="text" placeholder="Enter your email">
+
+            <input type="submit" class="button small" value="Sign Up">
+        </div>
+
+        <div class="cell copyright-footer large-11 large-offset-1">
+            <p class="copyright">© 2018 WELLPET LLC. ALL RIGHTS RESERVED</p>
+            <p class="terms"><a href="">Terms of Use</a> | <a href="">Privacy Policy</a> | <a href="">Site Map</a></p>
+        </div>
+    </div>
+</div>
+
 <script src="{{root}}assets/js/app.js"></script>
+
+<!-- Slick Carousel Slider -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.slick-slider').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<button type="button" class="slick-prev fa-arrow-left fas">Next</button>',
+        nextArrow: '<button type="button" class="slick-next fa-arrow-right fas">Next</button>',
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+              }
+            },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 640,
+            settings: {
+              dots: true,
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              dots: true,
+              arrows: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+    });
+</script>
+
 </body>
 </html>

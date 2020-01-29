@@ -1,0 +1,174 @@
+.home {
+
+    .home-slider {
+        position: relative;
+        background: url(/assets/img/home-bg-small.png) no-repeat center;
+        background-size: cover;
+        color: get-color(brand-purple);
+        text-align: center;
+
+        @include breakpoint(medium) {
+            background-size: 100%;
+        }
+
+        @include breakpoint(large) {
+            background: url(/assets/img/home-bg.png) no-repeat center;
+            background-size: cover;
+        }
+
+        .grid-container.full {
+            width: 100%;
+            padding: 0;
+
+            @include breakpoint(medium) {
+                padding: $global-padding;
+            }
+        }
+
+        &:before {
+            width:100%;
+            content:'';
+            display:block;
+            position:absolute;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left:0;
+            background: -moz-linear-gradient(top, get-color(cream) 0%, rgba(255,255,255,0) 40%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, get-color(cream) 0%,rgba(255,255,255,0) 40%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, get-color(cream) 0%,rgba(255,255,255,0) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=get-color(cream), endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: rem-calc(20);
+            margin-bottom: 0;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(26);
+            }
+
+            @include breakpoint(large) {
+                font-size: rem-calc(36);
+            }
+        }
+
+        h1 {
+
+            @include breakpoint(medium only) {
+                font-size: rem-calc(40);
+            }
+
+            @include breakpoint(large only) {
+                font-size: rem-calc(50);
+            }
+        }
+
+        .orbit-wrapper {
+            padding: rem-calc(60) 0 0;
+
+            @include breakpoint(medium) {
+                padding: rem-calc(70);
+            }
+
+            @include breakpoint(large) {
+                padding: rem-calc(100);
+            }
+        }
+    }
+
+    .treat-block {
+        position: relative;
+        background-image: url(/assets/img/purple-bg.png);
+        background-repeat: repeat;
+        color: $white;
+        margin-bottom: rem-calc(20);
+        text-align: center;
+        @include zig-zag(top, purple);
+        @include zig-zag(bottom, purple);
+
+        img {
+            padding-bottom: $global-padding;
+        }
+
+        p {
+            font-size: rem-calc(18);
+            margin-bottom: $global-margin;
+
+            @include breakpoint(large) {
+                font-size: rem-calc(24);
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        h4 {
+            font-size: rem-calc(20);
+
+            @include breakpoint(large) {
+                font-size: rem-calc(40);
+            }
+        }
+
+        // border-top: 10px solid get-color(brand-purple);
+        // border-image: url(/assets/img/rick-rack-purple.png) 30;
+        // border-image-outset: 1;
+        // border-image-repeat: repeat;
+
+        // &:before,
+        // &:after {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     right: 0;
+        //     background-repeat: repeat;
+        //     height: 8px;
+        //     background-size: 16px 16px;
+        //     background-image:
+        //     radial-gradient(circle at 8px 12px, transparent 8px, #fff 8px);
+        // }
+        //
+        // &:after {
+        //     top: auto;
+        //     bottom: 0;
+        //     background-image:
+        //     radial-gradient(circle at 8px -4px, transparent 8px, #fff 8px);
+        // }
+    }
+
+    .insta-block {
+        color: get-color(brand-purple);
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hashtag {
+            text-transform: uppercase;
+            font-size: rem-calc(10);
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: $letter-spacing;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(12);
+            }
+
+            @include breakpoint(large) {
+                font-size: rem-calc(14);
+            }
+        }
+
+        .insta-plugin {
+            margin-bottom: $global-margin;
+        }
+    }
+}

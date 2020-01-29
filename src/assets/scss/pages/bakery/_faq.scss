@@ -1,0 +1,12 @@
+.faq {
+
+    .hero-section {
+        background: url('/assets/img/faq-hero.png') 50% no-repeat;
+        background-size: cover;
+    }
+
+    .border {
+        position: relative;
+        @include zig-zag(top, cream);
+    }
+}

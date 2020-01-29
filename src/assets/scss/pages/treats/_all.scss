@@ -1,0 +1,51 @@
+.treats-all {
+
+    .hero-section {
+        background: url('/assets/img/treats-all-hero.png') 50% no-repeat;
+        background-size: cover;
+    }
+
+    .border {
+        position: relative;
+        @include zig-zag(top, cream);
+    }
+
+    .product-filter {
+        padding-top: $global-padding;
+
+        label select {
+            color: get-color(brand-purple);
+            text-transform: uppercase;
+            font-weight: 700;
+            padding-left: $global-padding/2;
+        }
+    }
+
+    .product-filter-results {
+        justify-content: space-between;
+        color: get-color(brand-purple);
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 rem-calc(20);
+    }
+
+    .product-grid {
+        margin: $global-margin*2 0;
+
+        img {
+            margin-bottom: $global-margin/2;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: rem-calc(21);
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: rem-calc(18);
+            margin-bottom: $global-margin/3;
+        }
+    }
+}

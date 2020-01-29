@@ -1,0 +1,54 @@
+.product-grid {
+    padding-top: $global-padding;
+    position: relative;
+
+    @include breakpoint(large) {
+        padding-top: $global-padding*4;
+    }
+
+    .treat {
+        color: get-color(brand-purple);
+        text-align: center;
+        margin-bottom: $global-margin*2;
+
+        img {
+            width: 64%;
+        }
+
+        h3 {
+            font-family: $body-font-family;
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            @include breakpoint(large) {
+                font-size: rem-calc(25);
+            }
+
+            @include breakpoint(xlarge) {
+                font-size: rem-calc(40);
+            }
+        }
+
+        p {
+            font-size: rem-calc(16);
+            margin-bottom: rem-calc(20);
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(18);
+            }
+
+            @include breakpoint(xlarge) {
+                font-size: rem-calc(28);
+            }
+        }
+
+        button {
+            font-size: rem-calc(14);
+            margin: 0;
+
+            @include breakpoint(xlarge) {
+                font-size: rem-calc(20);
+            }
+        }
+    }
+}

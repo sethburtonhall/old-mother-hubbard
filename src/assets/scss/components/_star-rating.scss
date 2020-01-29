@@ -1,0 +1,37 @@
+.rating-stars {
+    unicode-bidi: bidi-override;
+    margin: auto;
+}
+
+.rating-stars input {
+    position: absolute;
+    left: -999999px;
+}
+
+.rating-stars label {
+    display: inline-block;
+    font-size: 0;
+}
+
+.rating-stars > label:before {
+    position: relative;
+    font: 24px/1 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    // font-weight: normal;
+    display: block;
+    content: "\f005";
+    color: get-color(brand-yellow);
+    background: -webkit-linear-gradient(-45deg, get-color(bright-yellow) 0%, get-color(brand-yellow) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// .rating > label:hover:before,
+// .rating > label:hover ~ label:before,
+// .rating > label.selected:before,
+// .rating > label.selected ~ label:before {
+//     color: #f0ad4e;
+//     background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }

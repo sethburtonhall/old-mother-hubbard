@@ -1,0 +1,73 @@
+.quiz-cta {
+    position: relative;
+    background: url('/assets/img/quiz/quiz-cta.png') 25% no-repeat;
+    background-size: cover;
+    width: 90%;
+    margin-bottom: $global-margin*2;
+    padding: rem-calc(30) !important;
+    border-radius: 10px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.quiz-cta-body {
+    position: relative;
+    color: get-color(brand-purple);
+    text-transform: uppercase;
+    text-align: right;
+
+    @include breakpoint(large) {
+        width: 60%;
+    }
+
+    @include breakpoint(xlarge) {
+        text-align: center;
+        padding: rem-calc(82);
+    }
+
+    p {
+        color: get-color(brand-yellow);
+        font-weight: 700;
+        margin-bottom: rem-calc(20);
+
+        @include breakpoint(large) {
+            font-size: rem-calc(30);
+        }
+    }
+
+    h1 {
+        margin-bottom: $global-margin;
+    }
+
+    h1,
+    h2 {
+        line-height: 1;
+    }
+
+    button {
+        margin-bottom: 0;
+
+        @include breakpoint(small only) {
+            font-size: rem-calc(12);
+        }
+
+        @include breakpoint(medium only) {
+            font-size: rem-calc(14);
+        }
+
+        @include breakpoint(large only) {
+            font-size: rem-calc(16);
+        }
+
+    }
+}

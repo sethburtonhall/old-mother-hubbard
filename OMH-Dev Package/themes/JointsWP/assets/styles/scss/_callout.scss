@@ -1,0 +1,52 @@
+.callout-wrapper {
+  padding: 0 10%;
+
+  .caption-container {
+    position: relative;
+    padding: 60px 6%;
+    color: $white;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 25px;
+      border-top: 2px solid $maya-blue;
+      border-left: 2px solid $maya-blue;
+      border-bottom: 2px solid $maya-blue;
+    }
+
+    h2 {
+      font-size: rem-calc(26);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: "Source Serif Pro", serif;
+      font-size: rem-calc(24);
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+}
+
+@include breakpoint(medium down) {
+  .callout-wrapper {
+    padding: 0 6%;
+    .caption-container {
+      padding: 35px 0%;
+      &::before {
+        display: none;
+      }
+      h2 {
+        font-size: rem-calc(18);
+      }
+      p {
+        font-size: rem-calc(18);
+        margin-left: 17%;
+      }
+    }
+  }
+}

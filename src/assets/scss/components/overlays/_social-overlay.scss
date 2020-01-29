@@ -1,0 +1,84 @@
+.reveal.social-overlay {
+    background-color: get-color(cream);
+    width: 335px;
+    max-width: 335px;
+    padding: rem-calc(10);
+    margin: auto;
+
+    @include breakpoint(medium) {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    @include breakpoint(large) {
+        padding: rem-calc(25);
+        max-width: 70%;
+    }
+
+    .social-photo {
+        padding-bottom: $global-padding/3;
+
+        @include breakpoint(medium) {
+            padding-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .product-photo {
+        text-align: center;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin: 0 auto;
+            width: 59%;
+
+            @include breakpoint(medium) {
+                margin: 0;
+                width: 55%;
+            }
+
+            @include breakpoint(large) {
+                margin: 0;
+                width: 60%;
+            }
+
+            @include breakpoint(xlarge) {
+                margin: 0;
+                width: 60%;
+            }
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: $global-padding/2;
+            font-size: rem-calc(12);
+
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint(large) {
+                margin-bottom: 0;
+                font-size: rem-calc(16);
+            }
+        }
+    }
+
+    .close-button:before {
+        font-size: rem-calc(20);
+        top: 10px;
+        right: 10px;
+        color: get-color(brand-purple);
+    }
+}

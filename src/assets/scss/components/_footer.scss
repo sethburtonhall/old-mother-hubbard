@@ -1,0 +1,150 @@
+// Footer
+.footer {
+    position: relative;
+    background-image: url(/assets/img/purple-bg.png);
+    background-repeat: repeat;
+    text-align: center;
+    letter-spacing: $letter-spacing;
+    font-size: rem-calc(14);
+    font-weight: 700;
+    color: $white;
+    @include zig-zag(top, purple);
+
+    @include breakpoint(medium) {
+        text-align: left;
+    }
+
+    .footer-nav {
+        display: none;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+
+        p {
+            margin-bottom: rem-calc(10);
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                text-align: left;
+                list-style: none;
+
+                a {
+                    color: $white;
+                    font-weight: normal;
+
+                    &[class^='social_'] {
+                        float: left;
+
+                        @include breakpoint(medium) {
+                            font-size: rem-calc(15);
+                            margin-right: rem-calc(5);
+                        }
+
+                        @include breakpoint(large) {
+                            font-size: rem-calc(20);
+                            margin-right: rem-calc(20);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Form
+    h5 {
+        margin-bottom: 0;
+
+        @include breakpoint(small only) {
+            font-size: rem-calc(28);
+            padding: rem-calc(20);
+        }
+    }
+
+    p {
+        text-transform: uppercase;
+        font-size: rem-calc(10);
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(12);
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(14);
+        }
+    }
+
+    [type='text'] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $white;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: rem-calc(18);
+        height: rem-calc(31);
+        color: $white;
+
+        &:focus {
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    .button {
+        background-color: get-color(cream);
+        color: $black;
+        float: left;
+
+        &:hover {
+            background-color: darken(get-color(cream), 20%);
+        }
+    }
+
+    .copyright-footer {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+            flex-direction: row;
+        }
+
+        p {
+            font-size: rem-calc(9);
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            text-transform: uppercase;
+            margin-right: rem-calc(10);
+            order: 2;
+
+            @include breakpoint(medium) {
+                order: 1;
+            }
+        }
+
+        .terms {
+            text-transform: capitalize;
+            font-weight: 500;
+            order: 1;
+            margin: 0;
+
+            @include breakpoint(medium) {
+                order: 2;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}

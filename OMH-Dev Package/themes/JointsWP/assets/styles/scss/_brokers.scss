@@ -1,0 +1,186 @@
+.broker-headline {
+  padding-bottom: 40px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  h2 {
+    font-size: rem-calc(26);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $brand-blue;
+  }
+}
+
+.broker-box {
+  padding: 15px;
+
+  a {
+    position: relative;
+  }
+}
+
+.broker-photo {
+  position: relative;
+  width: 100%;
+  height: 350px;
+
+  background-size: cover;
+  background-position: top center;
+
+  &:before, &:after {
+    transition: all 0.2s ease;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba($brand-blue, 0.85);
+    opacity: 0;
+  }
+  &:after {
+    font-family: "ElegantIcons";
+    content: '0';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    font-size: rem-calc(60);
+    opacity: 0;
+  }
+
+  &:hover {
+    &:before, &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.broker-info {
+  padding-top: 10px;
+  p {
+    font-family: $body-font-family;
+    margin: 0;
+  }
+  .name {
+    font-size: rem-calc(18);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $brand-blue;
+  }
+
+  .title {
+    font-size: rem-calc(18);
+    font-weight: 100;
+    color: $black;
+  }
+}
+
+.reveal-overlay {
+  background-color: rgba($brand-blue, 0.85);
+  transition: all 0.2s ease;
+}
+
+.broker-reveal {
+  background-color: $brand-blue;//$light-gray;
+  color: $neutral-gray;
+  padding: 4rem 2rem;
+  transition: all 0.2s ease;
+  border: 0px;
+
+  &.large {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .close-button {
+    font-size: rem-calc(60);
+    color: $neutral-gray;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $dodger-blue;
+    }
+  }
+
+  h2 {
+    font-size: rem-calc(40);
+    text-transform: uppercase;
+    color: $neutral-gray;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: rem-calc(26);
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .title {
+    font-family: "Source Serif Pro", serif;
+    font-size: rem-calc(28);
+    font-weight: 100;
+    margin: 0 0 30px 0;
+  }
+
+  .email {
+    font-family: $body-font-family;
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    a {
+      color: $neutral-gray;
+    }
+  }
+
+  .phone {
+    font-family: $body-font-family;
+    font-size: rem-calc(16);
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0 0 30px 0;
+    a {
+      color: $neutral-gray;
+    }
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+}
+
+.general-style {
+  h2 {
+    font-size: rem-calc(26);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $brand-blue;
+  }
+
+  p {
+    font-family: $body-font-family;
+    font-size: rem-calc(18);
+    font-weight: 100;
+    color: $black;
+  }
+
+  b, strong {
+    font-size: rem-calc(18);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $brand-blue;
+  }
+}
+
+@include breakpoint(medium down) {
+  .broker-reveal {
+    padding: 3rem 0.25rem;
+  }
+}

@@ -1,0 +1,154 @@
+.grid-container.full {
+    padding: rem-calc(30);
+
+    .grid-container {
+        padding: 0;
+    }
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.orbit {
+
+    .orbit-controls {
+
+        .arrow_carrot-left:before,
+        .arrow_carrot-right:before {
+            font-size: 50px;
+        }
+
+        button {
+            display: none;
+            background-color: rgba(255,255,255, 0.5);
+            border-radius: 50px;
+            cursor: pointer;
+
+            @include breakpoint(medium) {
+                display: block;
+            }
+
+            &:hover {
+                background-color: rgba(255,255,255, 0.5);
+            }
+        }
+
+    }
+
+    &.blockquote {
+
+        .orbit-controls {
+
+            .arrow_carrot-left:before,
+            .arrow_carrot-right:before {
+                color: get-color(brand-purple);
+            }
+
+            button {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+button,
+.button {
+    text-transform: uppercase;
+    font-size: rem-calc(18);
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+
+    &.small {
+        font-size: rem-calc(14);
+        padding: 0.65em 2.5em;
+    }
+}
+
+hr {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.accordion {
+
+    a:hover, a:focus {
+        color: $body-font-color;
+        font-weight: 700;
+    }
+
+    .accordion-item:first-child > :first-child {
+        border-radius: 0;
+    }
+
+    :last-child:not(.is-active) > .accordion-title {
+        border-radius: 0;
+    }
+}
+
+.orbit.brand-purple {
+
+    .orbit-controls button {
+        color: get-color(brand-purple);
+    }
+
+    .orbit-bullets button {
+        background-color: rgba(get-color(brand-purple), .5);
+
+        &.is-active,
+        &:hover {
+            background-color: get-color(brand-purple);
+        }
+    }
+}
+
+// Slick
+.slick-dots li button:before {
+    opacity: 0.50;
+}
+
+.slick-prev, .slick-next {
+    width: rem-calc(50);
+    height: rem-calc(50);
+}
+.slick-prev {
+    left: -45px;
+}
+
+.slick-next {
+    right: -55px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: rem-calc(50);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    height: rem-calc(50);
+    padding-left: $global-padding/2;
+    margin: $global-margin/5 0 $global-margin 0;
+}
+
+
+label {
+    text-transform: uppercase;
+}
+
+label,
+input,
+input i,
+input::placeholder,
+select {
+    color: $body-font-color;
+}

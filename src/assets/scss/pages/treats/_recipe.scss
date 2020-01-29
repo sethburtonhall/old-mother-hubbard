@@ -1,0 +1,425 @@
+.treats-recipe {
+    color: get-color(brand-purple);
+
+    .recipe-header {
+        background: get-color(light-cream);
+
+        .header {
+            position: relative;
+            background-image: url(/assets/img/cream-bg.png);
+            background-repeat: repeat;
+            border: 0;
+            padding-top: $global-padding*4;
+            height: rem-calc(100);
+
+            @include breakpoint(small only) {
+                padding-top: $global-padding*2;
+            }
+
+            @include breakpoint(medium) {
+                height: rem-calc(130);
+            }
+
+            @include breakpoint(large) {
+                height: rem-calc(160);
+            }
+        }
+
+        .recipe-header-content {
+            align-items: center;
+            text-align: center;
+            padding: $global-padding;
+
+            @include breakpoint(small only) {
+                margin-top: rem-calc(-82);
+            }
+
+            @include breakpoint(medium only) {
+                margin-top: rem-calc(-152);
+            }
+
+            @include breakpoint(large) {
+                padding: 0 $global-padding;
+                margin: rem-calc(-95) 0 rem-calc(-107);
+                z-index: 8;
+            }
+
+            @include breakpoint(xlarge) {
+                padding: 0;
+                margin: rem-calc(-132) 0 rem-calc(-142);
+                z-index: 8;
+            }
+
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                margin-bottom: $global-margin/3;
+            }
+
+            .header-content {
+
+                img {
+                    width: 30%;
+
+                    @include breakpoint(xlarge) {
+                        width: initial;
+                    }
+                }
+
+                h2 {
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-size: rem-calc(20);
+
+                    @include breakpoint(medium) {
+                        font-size: rem-calc(28);
+                    }
+
+                    @include breakpoint(large) {
+                        font-size: rem-calc(30);
+                    }
+
+                    @include breakpoint(xlarge) {
+                        font-size: rem-calc(50);
+                    }
+                }
+
+                p {
+                    font-size: rem-calc(16);
+
+                    @include breakpoint(medium) {
+                        font-size: rem-calc(18);
+                    }
+
+                    @include breakpoint(xlarge) {
+                        font-size: rem-calc(30);
+                    }
+                }
+
+                .size-chart {
+
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: rem-calc(18);
+                        margin-bottom: $global-margin/3;
+                    }
+
+                    .sizes {
+                        align-items: flex-end;
+                        flex-direction: column;
+
+                        @include breakpoint(medium) {
+                            flex-direction: row;
+                        }
+
+                        img {
+                            width: initial;
+                        }
+
+                        .size {
+
+                            h6 {
+                                font-family: $body-font-family;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                margin-bottom: 0;
+                                font-size: rem-calc(21);
+                                line-height: 1;
+                            }
+
+                            p {
+                                font-weight: 400;
+                                font-size: rem-calc(14);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .recipe-tabs {
+        background: get-color(light-cream);
+
+        .tabs {
+            position: relative;
+            background-image: url(/assets/img/cream-bg.png);
+            background-repeat: repeat;
+            border: 0;
+            padding-top: $global-padding*4;
+
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabs-title > a:focus,
+        .tabs-title > a[aria-selected='true'] {
+            background: get-color(light-cream);
+            color: get-color(brand-purple);
+        }
+
+        .tabs-title {
+            margin-right: rem-calc(20);
+
+            a {
+                border-radius: 15px 15px 0 0;
+                text-transform: uppercase;
+                color: get-color(brand-yellow);
+                font-size: rem-calc(18);
+                font-weight: 700;
+                background: get-color(pale-yellow);
+
+                @include breakpoint(large) {
+                    font-size: rem-calc(24);
+                }
+            }
+        }
+
+        .accordion-item {
+
+            .accordion-title {
+                text-transform: uppercase;
+                color: get-color(brand-yellow);
+                font-size: rem-calc(18);
+                font-weight: 700;
+                background: get-color(pale-yellow);
+
+                @include breakpoint(large) {
+                    font-size: rem-calc(24);
+                }
+            }
+
+            &.is-active .accordion-title {
+                background: get-color(light-cream);
+                color: get-color(brand-purple);
+            }
+        }
+
+        .tabs-content,
+        .accordion-content {
+            background: get-color(light-cream);
+            border: 0;
+            max-width: 1655px;
+            margin: auto;
+            padding: $global-padding;
+
+            @include breakpoint(xlarge) {
+                padding: 0;
+            }
+
+            .tabs-content-image {
+                border-bottom: 1px solid get-color(brand-yellow);
+
+                .tabs-content-body {
+                    text-align: center;
+
+                    @include breakpoint(large) {
+                        text-align: left;
+                    }
+
+                    img {
+                        width: 50%;
+
+                        @include breakpoint(large) {
+                            width: 100%;
+                        }
+                    }
+
+                    .body {
+
+                        @include breakpoint(large) {
+                            padding: 0 0 0 $global-margin;
+                        }
+                    }
+                }
+            }
+
+            .tabs-content-ingredient {
+                text-align: center;
+                padding-top: $global-padding;
+
+                @include breakpoint(large) {
+                    padding: $global-padding*2 $global-padding*6;
+                }
+
+                p {
+                    margin-bottom: $global-margin;
+                }
+            }
+
+            .tabs-content-body {
+                align-items: center;
+
+                h4 {
+                    font-family: $body-font-family;
+                    text-transform: uppercase;
+                    color: get-color(brand-purple);
+                    font-size: rem-calc(20);
+
+                    @include breakpoint(medium) {
+                        font-size: rem-calc(25);
+                    }
+
+                    @include breakpoint(large) {
+                        font-size: rem-calc(28);
+                    }
+
+                    @include breakpoint(xlarge) {
+                        font-size: rem-calc(36);
+                    }
+                }
+
+                p {
+                    font-weight: normal;
+                    color: get-color(brand-purple);
+
+                    @include breakpoint(medium) {
+                        font-size: rem-calc(17);
+                    }
+
+                    @include breakpoint(large) {
+                        font-size: rem-calc(20);
+                    }
+
+                    @include breakpoint(xlarge) {
+                        font-size: rem-calc(30);
+                    }
+                }
+
+                .button {
+                    font-size: rem-calc(14);
+
+                    @include breakpoint(medium) {
+                        font-size: rem-calc(18);
+                    }
+                }
+            }
+        }
+    }
+
+    .other-products {
+        background: get-color(brand-purple);
+        text-align: center;
+        color: get-color(cream);
+        padding: $global-padding;
+        position: relative;
+        @include zig-zag(top, purple);
+        @include zig-zag(bottom, purple);
+
+        h3 {
+            font-family: $body-font-family;
+            text-transform: uppercase;
+            margin-bottom: $global-margin;
+        }
+
+        img {
+            margin-bottom: $global-margin;
+        }
+
+        h6 {
+            font-family: $body-font-family;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: rem-calc(20);
+            line-height: 1;
+
+            @include breakpoint(large) {
+                font-size: rem-calc(28);
+            }
+
+            @include breakpoint(xlarge) {
+                font-size: rem-calc(30);
+            }
+        }
+
+        p {
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(17);
+            }
+
+            @include breakpoint(large) {
+                font-size: rem-calc(20);
+            }
+
+            @include breakpoint(xlarge) {
+                font-size: rem-calc(24);
+            }
+
+        }
+    }
+
+    .product-reviews {
+        padding: $global-padding;
+
+        h3 {
+            font-family: $body-font-family;
+            text-transform: uppercase;
+            margin-bottom: $global-margin;
+        }
+
+        p.review-results {
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: $global-margin/3 0;
+        }
+
+        .review {
+            border-top: 1px solid get-color(brand-yellow);
+            padding: $global-padding 0;
+
+            @include breakpoint(large) {
+                padding: $global-padding*2 0;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid get-color(brand-yellow);
+            }
+
+            h5 {
+                font-family: $body-font-family;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+
+            p {
+                margin: 0;
+
+                @include breakpoint(medium) {
+                    font-size: rem-calc(18);
+                }
+
+                @include breakpoint(large) {
+                    font-size: rem-calc(21);
+                }
+            }
+
+            .read-more {
+                font-weight: 700;
+            }
+        }
+
+        .rating {
+            padding-bottom: $global-padding;
+        }
+
+        .load-more-button {
+            text-align: center;
+            margin: $global-margin*3 0 $global-margin*4;
+            width: 100%;
+
+            button {
+                margin: 0;
+            }
+        }
+    }
+}

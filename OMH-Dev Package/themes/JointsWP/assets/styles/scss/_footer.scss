@@ -1,0 +1,96 @@
+.footer {
+  background: $brand-blue;
+  padding: 65px 0 0 0;
+  margin-top: 60px;
+  font-family: $body-font-family;
+}
+
+.footer-logo {
+  width: 170px;
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.main-footer-nav {
+  h5 {
+    font-size: rem-calc(14);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $white;
+  }
+  p {
+    font-family: $body-font-family;
+    font-size: rem-calc(14);
+    font-weight: 100;
+  }
+
+  ul {
+    font-size: rem-calc(14);
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    color: $maya-blue;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .address {
+    font-family: $body-font-family;
+    color: $maya-blue;
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  .social-links{
+    margin: 0;
+    li {
+      width: 32px;
+      height: 32px;
+      margin: 0 7px 14px;
+      text-align: center;
+      a {
+        font-size: rem-calc(20);
+        line-height: 32px;
+        padding: 0;
+        margin: 0;
+        color: $brand-blue;
+        &:hover {
+          color: $brand-blue;
+        }
+      }
+    }
+  }
+}
+
+.copyright, .devby {
+  font-family: $body-font-family;
+  font-size: rem-calc(10);
+  color: $maya-blue;
+  margin: 0 15px;
+}
+
+.devby {
+  text-transform: uppercase;
+}
+
+.address-hr {
+  border-bottom: 2px solid $maya-blue;
+  width: 25%;
+}
+
+
+@include breakpoint(medium down) {
+  .main-footer-nav {
+    .address {
+      line-height: 28px;
+      .phone {
+        font-weight: 900;
+        color: $white;
+      }
+    }
+  }
+}
